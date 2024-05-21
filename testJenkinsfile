@@ -2,7 +2,7 @@ pipeline{
       agent any
       stages{
             stage('Dependency install'){
-                agent{ docker {image 'node:alpine:3.18'}}
+                agent{ docker {image 'node:node:14.15.3 '}}
                  steps{
                      sh 'npm install'
                      
