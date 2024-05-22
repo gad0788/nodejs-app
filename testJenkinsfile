@@ -2,7 +2,7 @@ pipeline{
       agent any
       stages{
             stage('Dependency install'){
-                agent{ docker {image 'nodejs'}}
+                agent{ docker {image 'node:9.8.1'}}
                  steps{
                      sh 'npm install'
                      
