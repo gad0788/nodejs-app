@@ -15,12 +15,12 @@ pipeline{
             sh 'npm pack'
         }
       } 
-      // stage('upload artifact'){
-      //   steps{
-      //      sh 'curl -uadmin:AP3yQAuEtNW52NMLC1yXozr4nbt -T \
-      //      *.tgz \
-      //      "http://ec2-54-157-132-219.compute-1.amazonaws.com:8081/artifactory/utc-nodejs-app/utc-app-${BUILD_ID}.tgz" '
-      //   }
-      // }
+      stage('upload artifact'){
+        steps{
+           sh 'curl -uadmin:AP8gcgmmset5jeYChTJYDN6XmDd -T \
+           *.tgz \
+           ""http://ec2-34-205-156-53.compute-1.amazonaws.com:8081/artifactory/utc-nodejs/utc-app-${BUILD_ID}.tgz" '
+        }
+      }
     }
 }
