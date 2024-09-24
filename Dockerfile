@@ -2,9 +2,9 @@ FROM node
 
 WORKDIR /usr/src/app
 
-COPY my-app-1.3.0.tgz .
+COPY my-app-1.2.0.tgz .
 
-RUN tar -xzf my-app-1.3.0.tgz && \
+RUN tar -xzf my-app-1.2.0.tgz && \
     mv package/* ./ && \
     rm -rf package && \
     npm install
